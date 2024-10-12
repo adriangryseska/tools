@@ -15,82 +15,49 @@
       });
     </script>
     <title>Winrate Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="margin: 0; text-align: left; height: 100%; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; background-color: #222; color: whitesmoke;"
+<body>
 
->
-    <div class="header" style="padding: 5px; height:10%; margin-top: 10px; margin-left: 20px; font-size: 13px;">Follow me on : <span><a style="color: #bc2a8d;" href="https://www.instagram.com/adrian.gryseska/">Instagram</a></span> | Subscribe my <span><a style="color: #c4302b;" href="https://youtube.com/AdrianGryseska">Youtube</a></span> channel</div>
+    <div class="header">Follow me on : <span><a href="https://www.instagram.com/adrian.gryseska/">Instagram</a></span> | Subscribe my <span><a href="https://youtube.com/AdrianGryseska">Youtube</a></span> channel</div>
 
-    <hr style="border: 1px solid;">
+    <hr>
 
-
-    <div class="main" style="display: block ; padding-top: 10px; padding-bottom: 10px; margin-left: 15%; margin-right: 15%; ">
-
+    <div class="main">
         <br>
-        <h2 style="text-align: center; padding-bottom: 10px; font-size: 40px;">Winrate Calculator</h2>
-        <p style="text-align: center;"><small>Feel free to use this calculator<br></small></p>
-
+        <h2>Winrate Calculator</h2>
+        <p><small>Feel free to use this calculator<br></small></p>
         <br>
-        <label style="display: flex; padding-top: 20px;padding-bottom: 14px;">Input Your WR</label>
-        <input style="padding: 6px; width: 95%;" type="number" id="tWr" placeholder="For Example: 60.5" style="width: 100%;">
-        <br><br><br>
-        <label style="display: flex; padding-bottom: 14px;">Target WR</label>
-        <input style="padding: 6px; width: 95%;" type="number" id="wrReq" placeholder="For Example: 65"  style="width: 100%;">
-        <br><br><br>
-        <label style="display: flex; padding-bottom: 14px;">Total Match</label>
-        <input style="padding: 6px; width: 95%;" type="number" id="tMatch" placeholder="For Example: 239"  style="width: 100%;">
+
+        <label>Input Your WR</label>
+        <input type="number" id="tWr" placeholder="For Example: 60.5">
+        <br><br>
+
+        <label>Target WR</label>
+        <input type="number" id="wrReq" placeholder="For Example: 65">
+        <br><br>
+
+        <label>Total Match</label>
+        <input type="number" id="tMatch" placeholder="For Example: 239">
 
         <br><br>
+
         <div align="center">
-             <button style="margin-top: 25px; width:80px; background: transparent; border: 1px solid white;cursor:pointer; text-align: center; border-radius: 5px; color: whitesmoke; padding: 5px;" onclick="hitung()" >Calculate</button>
-             <button style="margin-top: 25px; width:80px; background: transparent; border: 1px solid white;cursor:pointer; text-align: center; border-radius: 5px; color: whitesmoke; padding: 5px;" onclick="hapus()" >Clear</button>
-
-
-             <!--Javascript-->
-            <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-            <script type="text/javascript">
-
-            function hitung() {
-
-                const tWr=document.getElementById("tWr").value;
-                const wrReq=document.getElementById("wrReq").value;
-                const tMatch=parseInt(document.getElementById("tMatch").value);
-
-                 let tWin = tMatch * (tWr / 100);
-                 let tLose = tMatch * ((100 - tWr) / 100);
-                 let sisaWr = 100 - wrReq;
-                 let wrResult = 100 / sisaWr;
-                 let seratusPersen = tLose * wrResult;
-                 let total = seratusPersen - tMatch;
-                 let totalnocommas = Math.ceil(total);
-
-                document.getElementById("wacingcong").innerHTML=totalnocommas;
-                }
-            
-            function hapus() {
-                document.getElementById("tWr").value='';
-                document.getElementById("wrReq").value='';
-                document.getElementById("tMatch").value='';
-
-            }
-
-            </script>
-
-            <br><br><br><br>
-
+             <button onclick="hitung()">Calculate</button>
+             <button onclick="hapus()">Clear</button>
         </div>
 
-        <h4 style="text-align: center; font-weight: bold;">You have to win  <span id="wacingcong">0</span> matches without losing to reach the desired winrate.</h4>
+        <br><br>
+
+        <h4>You have to win <span id="wacingcong">0</span> matches without losing to reach the desired winrate.</h4>
 
     </div>
     
-    <br><br><br><br><br><br><br><br><br><br>
-    
-    <hr style="border: 1px solid;">
+    <hr>
 
-    <div align="center" class="footer" style="height: fit-content; margin-bottom: 15px;"><small style="font-size: 10px;">&copy; Copyright 2022 - Adrian Gryseska | All Right Reserved</div>
+    <div class="footer">&copy; Copyright 2022 - Adrian Gryseska | All Right Reserved</div>
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
