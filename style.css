@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    text-align: left;
+    height: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #222;
+    color: whitesmoke;
+}
+
+.header {
+    padding: 5px;
+    height: 10%;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+a {
+    color: #bc2a8d;
+}
+
+a[href*="youtube"] {
+    color: #c4302b;
+}
+
+hr {
+    border: 1px solid;
+}
+
+.main {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 40px;
+}
+
+label {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 14px;
+}
+
+input {
+    padding: 6px;
+    width: 95%;
+}
+
+button {
+    margin-top: 25px;
+    width: 80px;
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    color: whitesmoke;
+    padding: 5px;
+}
+
+h4 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer {
+    height: fit-content;
+    margin-bottom: 15px;
+    font-size: 10px;
+}
